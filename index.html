@@ -15,17 +15,6 @@
 <input type="text" id="newItem" placeholder="Add new item">
 <button type="button" onclick="addItem()">Add Item</button>
 <ul id="myList"></ul>
-<script>
-    function addItem() {
-        var ul = document.getElementById('myList');
-        var li = document.createElement('li');
-        var inputValue = document.getElementById('newItem').value;
-        li.appendChild(document.createTextNode(inputValue));
-        ul.appendChild(li);
-        document.getElementById('newItem').value = ''; // Clear the input field
-    }
-</script>
-
 
 </body>
 </html>
