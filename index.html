@@ -1,45 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gnarp</title>
 </head>
 <body>
-    <h1>click to message</h1>
-    <button id="sendMessageButton">Send Message</button>
-
-    <script>
-        // Replace with your actual webhook URL
-        const webhookURL = 'https://discord.com/api/webhooks/1318590113864880180/2Ixo8OGO5ZD0xT0TtZlO054yI0iwxgCUMc7wTajS9thIJVEn7pSKmkilkR5Q6v0azK2e';
-
-        // Function to send message to the webhook
-        async function sendMessage() {
-            const messageData = {
-                content: 'Hello from GitHub Pages!',  // The message you want to send
-            };
-
-            try {
-                const response = await fetch(webhookURL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(messageData),
-                });
-
-                if (response.ok) {
-                    alert('Message sent successfully!');
-                } else {
-                    alert('Error sending message');
-                }
-            } catch (error) {
-                alert('Error sending message: ' + error);
-            }
-        }
-
-        // Event listener for the button
-        document.getElementById('sendMessageButton').addEventListener('click', sendMessage);
-    </script>
+    <text>hello linganguli guli</text>
 </body>
 </html>
