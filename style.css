@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('images/backgrounds/bg1.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    position: relative;
+    overflow-y: scroll;
+    animation: bounceBackground 20s infinite ease-in-out;  /* Slower and less movement */
+}
+
+/* Keyframes for the background bounce effect */
+@keyframes bounceBackground {
+    0% {
+        background-position: center top;
+    }
+    50% {
+        background-position: center center;  /* Slight movement */
+    }
+    100% {
+        background-position: center top;
+    }
+}
+
+/* Profile card container */
+.profile-card {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for profile card */
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Profile image styling */
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for profile image */
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+/* Username styling */
+.username {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Status section styling */
+.status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+/* Status icon styling */
+.status-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for status icon */
+.status-icon:hover {
+    transform: rotate(360deg);
+}
+
+/* Status text styling */
+.status-text {
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Main content container */
+.container {
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.subtitle, .visitor {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for cards */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+h1, h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.japanese {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for links */
+a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
+
+/* Social items: Aligning image and text horizontally */
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#visit-count {
+    font-weight: bold;
+    color: #ff6347;
+}
+
+/* Hover effect for social items */
+.social-item:hover {
+    transform: translateX(5px);
+}
+
+/* Social icon size */
+.social-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for social icons */
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Slider Toggle Button Styles */
+.toggle-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.toggle-label {
+    font-size: 14px;
+    color: white;
+    margin-left: 5px;
+}
+
+/* Button to toggle effects */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background-color: #ff4500;
+}
+
+/* Blur effect */
+.blurred {
+    filter: blur(.7px);
+}
+
+/* Glow effect */
+.glow {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 12px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    .subtitle, .visitor {
+        font-size: 12px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+}
