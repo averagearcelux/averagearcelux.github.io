@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kenny</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+            position: relative;
+        }
+        iframe {
+            width: 100vw;  /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            border: none;  /* No border */
+            position: fixed; /* Fixed positioning to stay behind everything else */
+            top: 0;
+            left: 0;
+            z-index: -1;  /* Keeps iframe behind other content */
+        }
+        .info-box {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6); /* Black transparent background */
+            padding: 20px;
+            border: none; /* No border */
+            border-radius: 15px; /* Rounded edges */
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            font-weight: bold; /* Bold text */
+            max-width: 80%;
+            z-index: 1;  /* Ensures the info box stays above the iframe */
+        }
+        .info-box a {
+            color: #00bfff;
+            text-decoration: none;
+        }
+        .info-box a:hover {
+            text-decoration: underline;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 2;  /* Ensures the button stays on top */
+        }
+        .close-btn:hover {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://bit.ly/4h9GsUB"></iframe>
+    <div class="info-box" id="infoBox">
+        <button class="close-btn" onclick="closeBox()">X</button>
+        <p>Made by <a href="https://github.com/kennydrift" target="_blank">kennydrift</a>, <a href="https://github.com/averagearcelux" target="_blank">averagearcelux</a>, and <a href="https://discord.com/users/698783285827993602" target="_blank">gnarpgnab</a></p>
+    </div>
+
+    <script>
+        function closeBox() {
+            document.getElementById("infoBox").style.display = "none";
+        }
+    </script>
+</body>
+</html>
